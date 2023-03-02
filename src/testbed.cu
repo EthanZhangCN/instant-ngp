@@ -767,6 +767,14 @@ void Testbed::imgui() {
 	}
 	ImGui::End();
 
+	ImGui::Begin("Capture");
+
+	if (imgui_colored_button("Start!", 0.4f)) {
+		printf("hello I'm here");
+		ImGui::OpenPopup("message");
+	}
+
+	ImGui::End();
 
 	ImGui::Begin("instant-ngp v" NGP_VERSION);
 
